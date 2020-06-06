@@ -2,6 +2,7 @@
 the project is where my homework submit which class is  Tsinghua Advanced machine learning .
 
 ## Homework_2
+相关CODE和具体的报告说明见 name-disambiguation 文件夹
 #### Name Disambiguation   同名消歧
 - 同名消歧是一个具有挑战性的问题，由于数据的杂乱以及同名情景十分复杂，要快速且准确的解决同名消歧问题还有很大的障碍。 
 
@@ -14,5 +15,6 @@ the project is where my homework submit which class is  Tsinghua Advanced machin
 - 主要难点在于怎么提取论文的特征向量，以及采用哪种聚类算法进行聚类。  
 - 文本特征如何提取 ： TF-IDF ， 图表征的学习方法
 - 聚类算法 ： DBSCAN算法  
+
 
 
