@@ -16,5 +16,18 @@ the project is where my homework submit which class is  Tsinghua Advanced machin
 - 文本特征如何提取 ： TF-IDF ， 图表征的学习方法
 - 聚类算法 ： DBSCAN算法  
 
+## Homework_6: Social Influence Prediction With GNNS 
+
+##### 实验说明
+- 基于论文《DeepInf: Social Influence Prediction with Deep Learning》 实现对微博用户的行为进行预测，
+- GCN (Graph Convolutional Network) and GAT (Graph attention network)
+
+###### Data Set 
+- adjacency_matrix.npy   每个实例对应的邻接矩阵， 每个实例是一个采样的自我中心网络。
+- vertex_id.npy   自我中心网络的采样节点， 每一个节点由一个节点ID标识。
+- deepwalk.emb_64   每个节点的预训练嵌入，每个嵌入向量都与一个节点ID相关联。
+- vertex_feature.npy  每个节点的自定义顶点特征，每个嵌入向量都与一个节点ID相关联 。
+- influence_feature.npy  自我中心网络的两个虚拟特征，一个指示用户是否活跃，另一个指示用户是否为自我 。 
+- label.npy  每个实例的对应标签 
 
 
