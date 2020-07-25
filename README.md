@@ -22,6 +22,7 @@ the project is where my homework submit which class is  Tsinghua Advanced machin
 - 基于论文《DeepInf: Social Influence Prediction with Deep Learning》 实现对微博用户的行为进行预测，
 - GCN (Graph Convolutional Network) and GAT (Graph attention network)
 - 主要参考 ： https://github.com/xptree/DeepInf ，来实现模型预测 。 
+- code ：homework_6
 ###### Data Set 
 - adjacency_matrix.npy   每个实例对应的邻接矩阵， 每个实例是一个采样的自我中心网络。
 - vertex_id.npy   自我中心网络的采样节点， 每一个节点由一个节点ID标识。
@@ -29,5 +30,13 @@ the project is where my homework submit which class is  Tsinghua Advanced machin
 - vertex_feature.npy  每个节点的自定义顶点特征，每个嵌入向量都与一个节点ID相关联 。
 - influence_feature.npy  自我中心网络的两个虚拟特征，一个指示用户是否活跃，另一个指示用户是否为自我 。 
 - label.npy  每个实例的对应标签 
+
+##### 论文模型复现解读
+- 论文提出了端到端模型Deepinf，通过使用深度学习算法对图结构中节点影响力进行预测。 
+- 论文主要解决的问题是：给定节点v， 和它的近邻节点，在一个时间窗口内，通过对开始时间各节点状态（包括图结构和节点特征）进行建模，完成对结束时间节点v状态的预测。 
+- 在论文中，图结构使用图神经网络GCN（Graph Convolutional Neural Network）抽取，节点特征使用训练好的DeepWalk工具进行抽取。
+- 在此基础上，使用注意力机制，通过对节点v临近的不同节点赋予不同的权重，使用图注意力网络GAT（Graph Attention Model）进行了进一步拓展。
+- GCN执行图卷积运算，GAT则是在GCN的基础上加入了attention机制，能够在临近节点的影响中加入权重，从而能够将临近节点的影响进行差异化。
+- 通过结合网络的结构特征和用户层面的特征信息，使用图卷积神经网络进行了学习 ；
 
 
