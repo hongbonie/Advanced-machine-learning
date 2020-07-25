@@ -18,7 +18,7 @@ the project is where my homework submit which class is  Tsinghua Advanced machin
 
 ## Homework_6: Social Influence Prediction With GNNS 
 
-##### 实验说明
+##### 作业说明
 - 基于论文《DeepInf: Social Influence Prediction with Deep Learning》 实现对微博用户的行为进行预测，
 - GCN (Graph Convolutional Network) and GAT (Graph attention network)
 - 主要参考 ： https://github.com/xptree/DeepInf ，来实现模型预测 。 
@@ -38,5 +38,30 @@ the project is where my homework submit which class is  Tsinghua Advanced machin
 - 在此基础上，使用注意力机制，通过对节点v临近的不同节点赋予不同的权重，使用图注意力网络GAT（Graph Attention Model）进行了进一步拓展。
 - GCN执行图卷积运算，GAT则是在GCN的基础上加入了attention机制，能够在临近节点的影响中加入权重，从而能够将临近节点的影响进行差异化。
 - 通过结合网络的结构特征和用户层面的特征信息，使用图卷积神经网络进行了学习 ；
+
+## Homework_7:Semi-GAN: semi-supervised learning with GANs
+
+##### 作业说明
+- 基于论文《Semi-supervised Learning on Graphs with Generative Adversarial Nets》 实现在 cora 数据集上的分类。 
+
+##### homework  
+- 半监督学习：使用小的标记数据和大的未标记数据进行学习。
+- 在semi-GAN中，鉴别器为分类器 
+- 对与未标记的样本，鉴别器被训练为两类  fake real
+- 对于标记样本，鉴别器被训练为识别N+1个类，（N个预定义类和一个附加类，指示图像是否为 fake）
+- 论文 ： 使用生成对抗网络对图进行半监督学习。
+- 在 cora 数据集上实现 GrapSGAN 
+- 结果对比 
+- 分析不同损失的影响 
+
+###### Data Set 
+
+Dataset | nodes  | edges | features | classses | labeled data 
+---  |---   | ---  | --- |--- |---
+Cora | 2708 | 5429 | 1433 | 7 | 140 
+
+
+
+
 
 
