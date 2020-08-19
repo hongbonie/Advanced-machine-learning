@@ -90,7 +90,7 @@ Cora | 2708 | 5429 | 1433 | 7 | 140
 ####  环境配置 Docker
 
 Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中,然后发布到任何流行的Linux机器上,也可以实现虚拟化,容器是完全使用沙箱机制,相互之间不会有任何接口。
-
+```
 curl
 git
 vim
@@ -108,12 +108,12 @@ freeglut3-dev
 libx11-6
 python-opengl
 x11-xserver-utils
-
-
+```
+```
 docker run --gpus all --volume="$HOME/mrl:/tf" -it --user="0:0" chenqibin422/minerl bash
 
 nvidia-docker run --volume="$HOME/mrl:/tf" -it --user="0:0" chenqibin422/minerl bash
-
+```
 #### baseline 
 
 https://github.com/minerllabs/baselines
